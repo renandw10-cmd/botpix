@@ -304,3 +304,9 @@ client.on("interactionCreate", async (interaction) => {
 
 client.on("error", console.error);
 client.login(DISCORD_TOKEN);
+const http = require("http");
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("Bot online");
+}).listen(process.env.PORT || 3000);
